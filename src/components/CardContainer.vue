@@ -1,7 +1,15 @@
 <template>
   <section class="card-container">
 
-      <Card title="Ciao" mainTime="32hrs" lastTime="7hrs"/>
+      <Card 
+      v-for="(item, index) in dataArray" :key="`data-${index}`"
+      
+      :logo="require(`../assets/${imageCard[index].url}`)"
+      :title="item.title"
+      :mainTime="item.timeframes[statement].current"
+      :lastTime="item.timeframes[statement].previous"
+      :className="imageCard[index].color"
+      />
    
      
 
@@ -11,11 +19,54 @@
 <script>
 import Card from '@/components/Card.vue'
 
+
+
 export default {
     name: 'CardContainer',
     components: {
         Card,
+    },
+
+    props: {
+        dataArray: Array,
+        statement: String
+    },
+
+    data() {
+        return {
+            imageCard: [
+                {
+                    url: 'icon-work.svg',
+                    color: 'work',
+                },
+                {
+                    url: 'icon-play.svg',
+                    color: 'play',
+                },
+                {
+                    url: 'icon-study.svg',
+                    color: 'study',
+                },
+                {
+                    url: 'icon-exercise.svg',
+                    color: 'exercise',
+                },
+                {
+                    url: 'icon-social.svg',
+                    color: 'social',
+                },
+                {
+                    url: 'icon-self-care.svg',
+                    color: 'self',
+                },
+            ]
+        }
     }
+
+ 
+
+
+
 }
 </script>
 

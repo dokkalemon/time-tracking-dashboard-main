@@ -1,8 +1,8 @@
 <template>
   <section class="card">
     <div class="card-container">
-        <div class="card-image">
-            <img src="../assets/icon-work.svg" alt="">
+        <div class="card-image" :class="className">
+            <img :src="logo" alt="">
         </div>
     
         <div class="card-info px-30">
@@ -11,10 +11,10 @@
                 <img src="../assets/icon-ellipsis.svg" alt="">
             </div>
             <div class="card-info-main">
-                <h3>{{mainTime}}</h3>
+                <h3>{{mainTime}}hrs</h3>
             </div>
             <div class="card-info-subtitle">
-                <p>Last Week - {{lastTime}}</p>
+                <p>Last Week - {{lastTime}}hrs</p>
             </div>
         </div>
 
@@ -31,8 +31,9 @@ export default {
     props: {
         logo: String,
         title: String,
-        mainTime: String,
-        lastTime: String,
+        mainTime: Number,
+        lastTime: Number,
+        className: String,
     }
 }
 </script>
@@ -68,7 +69,6 @@ export default {
   .card-image {
       width: 100%;
       height: 50px;
-      background-color: $work-color;
       position: relative;
       img {
           height: 140%;
@@ -77,6 +77,25 @@ export default {
           right: 20px;
           top: -10px;
       }
+  }
+
+  .work {
+      background-color: $work-color
+  }
+  .play {
+      background-color: $play-color
+  }
+  .study {
+      background-color: $study-color
+  }
+  .exercise {
+      background-color: $exercise-color
+  }
+  .social {
+      background-color: $social-color
+  }
+  .self {
+      background-color: $self-color
   }
 
     .card-info {

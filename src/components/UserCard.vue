@@ -13,13 +13,13 @@
         <div class="time px-30">
             <ul>
                 <li>
-                    <a href="#">Daily</a>
+                    <button value="daily" @click="$emit('prova', 'daily')" :class="{active: (statement === 'daily')}">Daily</button>
                 </li>
                 <li>
-                    <a href="#">Weekly</a>
+                    <button value="weekly" @click="$emit('prova', 'weekly')" :class="{active: (statement === 'weekly')}">Weekly</button>
                 </li>
                 <li>
-                    <a href="#">Monthly</a>
+                    <button value="monthly" @click="$emit('prova', 'monthly')" :class="{active: (statement === 'monthly')}">Monthly</button>
                 </li>
             </ul>
         </div>
@@ -28,7 +28,11 @@
 
 <script>
 export default {
-    name: 'UserCard'
+    name: 'UserCard',
+
+    props: {
+        statement: String,
+    }
 }
 </script>
 
@@ -86,13 +90,19 @@ export default {
 
                 li {
 
-                    a {
+                    button {
+                        background-color: transparent;
+                        border: none;
                         color: $subtext-color;
-                        text-decoration: none;
+                        font-size: 18px;
+                        cursor: pointer;
                         
                         &:active {
                             color: white;
                         }
+                    }
+                    .active {
+                        color: white;
                     }
 
                 }
