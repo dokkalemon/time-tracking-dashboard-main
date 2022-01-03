@@ -1,0 +1,17 @@
+/* Import var */
+@import './var.scss';
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General */
+body {
+    background-color: $background;
+    font-family: $font-main;
+    color: $text-color;
+    font-size: 18px;
+}
