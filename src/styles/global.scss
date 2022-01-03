@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+*::selection {
+    background-color: none;
+}
+
 /* General */
 body {
     background-color: $background;

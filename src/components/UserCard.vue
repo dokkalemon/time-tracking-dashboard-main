@@ -36,6 +36,8 @@ export default {
 @import '@/styles/var.scss';
 
     .user-card {
+        margin-left: 15px;
+        margin-right: 15px;
         height: 480px;
         width: 250px;
         background-color: $front-card;
@@ -54,19 +56,19 @@ export default {
                     height: 100%;
                     margin-top: 30px;
                     border-radius: 100%;
-                    border: 2px solid white;
+                    border: 3px solid white;
                 }
             }
 
             .user-info-name {
-                padding-top: 60px;
+                padding-top: 70px;
                 p {
                     font-size: 14px;
                     color: $subtext-color;
                 }
 
                 h2 {
-                    font-size: 40px;
+                    font-size: 38px;
                     font-weight: 300;
                 }
             }

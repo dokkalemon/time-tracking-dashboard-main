@@ -1,6 +1,7 @@
 <template>
   <main>
     <UserCard />
+    <CardContainer />
 
 
   </main>
@@ -12,11 +13,14 @@
 
 <script>
 import UserCard from '@/components/UserCard.vue'
+import CardContainer from '@/components/CardContainer.vue'
+
 
 export default {
   name: 'App',
   components: {
-    UserCard
+    UserCard,
+    CardContainer,
 
   }
 }
