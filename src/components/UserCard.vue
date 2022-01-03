@@ -5,20 +5,26 @@
                 <img src="../assets/image-jeremy.png" alt="">
             </div>
 
-            <div class="user-info">
+            <div class="user-info-name">
                 <p>Report for</p>
                 <h2>Jeremy Robson</h2>
             </div>
         </div>
-
-        <div class="time">
-
+        <div class="time px-30">
+            <ul>
+                <li>
+                    <a href="#">Daily</a>
+                </li>
+                <li>
+                    <a href="#">Weekly</a>
+                </li>
+                <li>
+                    <a href="#">Monthly</a>
+                </li>
+            </ul>
         </div>
     </section>
 </template>
-
-
-
 
 <script>
 export default {
@@ -30,7 +36,7 @@ export default {
 @import '@/styles/var.scss';
 
     .user-card {
-        height: 500px;
+        height: 480px;
         width: 250px;
         background-color: $front-card;
         border-radius: 15px;
@@ -38,7 +44,7 @@ export default {
 
         .user-info {
             width: 100%;
-            height: 65%;
+            height: 70%;
             background-color: $user-color;
             border-radius: 15px;
 
@@ -52,7 +58,7 @@ export default {
                 }
             }
 
-            .user-info {
+            .user-info-name {
                 padding-top: 60px;
                 p {
                     font-size: 14px;
@@ -63,9 +69,32 @@ export default {
                     font-size: 40px;
                     font-weight: 300;
                 }
-
             }
+        }
 
+        .time {
+            height: 30%;
+            ul {
+                height: 100%;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                padding: 15px 0;
+
+                li {
+
+                    a {
+                        color: $subtext-color;
+                        text-decoration: none;
+                        
+                        &:active {
+                            color: white;
+                        }
+                    }
+
+                }
+            }
         }
     }
 
