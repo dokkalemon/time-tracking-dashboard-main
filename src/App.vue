@@ -63,4 +63,15 @@ main {
   align-items: center;
 }
 
+@media screen and (max-width: 375px) {
+  main {
+    flex-direction: column;
+    padding: 0px 20px;
+    justify-content: flex-start;
+    margin-top: 20px;
+    height: auto;
+    
+  }
+}
+
 </style>

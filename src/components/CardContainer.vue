@@ -78,4 +78,13 @@ export default {
     flex-wrap: wrap;
 }
 
+@media screen and (max-width: 375px) {
+    .card-container {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        
+    }
+}
+
 </style>

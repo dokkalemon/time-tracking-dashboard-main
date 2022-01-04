@@ -10,11 +10,13 @@
                 <p>{{title}}</p>
                 <img src="../assets/icon-ellipsis.svg" alt="">
             </div>
-            <div class="card-info-main">
+            <div class="card-info-info">
+                <div class="card-info-main">
                 <h3>{{mainTime}}hrs</h3>
             </div>
             <div class="card-info-subtitle">
                 <p>Last Week - {{lastTime}}hrs</p>
+            </div>
             </div>
         </div>
 
@@ -121,7 +123,10 @@ export default {
                 }
             }
         }
-        .card-info-main {
+       .card-info-info {
+           display: flex;
+           flex-direction: column;
+            .card-info-main {
             margin-top: 25px;
             h3 {
                 font-size: 50px;
@@ -136,6 +141,7 @@ export default {
                 color: $subtext-color;
             }
         }
+       }
     }
 
     &:active {
@@ -145,4 +151,37 @@ export default {
     }
 }
 
+@media screen and (max-width: 375px) {
+.card {
+ width: 100%;
+ height: 150px;
+
+ margin-top: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+&:nth-child(-n+3) {
+    padding-bottom: 0;
+}
+
+  &:nth-child(+n+4) {
+    padding-top: 0px;
+  }
+}
+
+
+.card-info {
+      .card-info-info {
+          flex-direction: row !important;
+          align-items: center;
+          .card-info-main {
+              margin-top: 0 !important;
+              flex-grow: 1;
+              h3 {
+                  font-size: 35px !important;
+              }
+          }
+      }
+}
+}
 </style>

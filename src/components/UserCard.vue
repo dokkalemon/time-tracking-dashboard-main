@@ -47,12 +47,15 @@ export default {
         background-color: $front-card;
         border-radius: 15px;
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.262);
+        
 
         .user-info {
             width: 100%;
             height: 70%;
             background-color: $user-color;
             border-radius: 15px;
+            display: flex;
+            flex-direction: column;
 
             .user-img {
                 height: 80px;
@@ -109,6 +112,50 @@ export default {
             }
         }
     }
+@media screen and (max-width: 375px) {
 
+.user-card {
+    width: 100%;
+    height: 250px;
+
+    .user-info {
+        flex-direction: row;
+        align-items: center;
+        .user-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width:35%;
+            img {height: 40%; margin-top: 0;}
+        }
+        .user-info-name {
+            height: 100%;
+            padding-top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2 {
+                font-size: 24px;
+            }
+        }
+
+    }
+    .time {
+        ul {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
+
+
+}
+
+
+
+
+}
 
 </style>
